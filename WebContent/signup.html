@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background:url("https://c0.wallpaperflare.com/preview/731/941/156/flat-lay-photography-of-person-holding-opened-book-on-tabletop-beside-cup-of-black-coffee.jpg");
+background-size:fixed;
+background-repeat:norepeat;
+text-align:center;
+}
+</style>
+<script>function validateform(){  
+     var name=document.myform.name.value;  
+     var password=document.myform.password.value; 
+     var confpassword =document.myform.confpassword.value;
+     var email = document.myform.email.value;
+
+
+      if (name==null || name==""){  
+    	    alert("Name can't be blank");  
+    	     return false;  
+    	} 
+     else if(password==null || password==""){
+    		alert("Please enter password");
+    		return false;
+    	}
+     else if(password.length<6){  
+   	  alert("Password must be at least 6 characters long.");  
+   	  return false;  
+   	  } 
+   else if(confpassword==null || confpassword==""){
+   	alert("Confirm Password should not be empty");
+   	return false;
+   }
+   else if(confpassword != password){
+   	alert("Confirm Password and Password should be same");
+   	return false;
+   }
+   else if(email == null || email ==""){
+   	alert("Please enter Email");
+   	return false;
+   }
+  
+}  
+
+  </script>
+
+<title>Signup page</title>
+</head>
+<body>
+<form  name="myform" method="post" action="bookscatalog.html" onsubmit = "return validateform()">
+<h1>Create a new account!</h1>
+<i><h5>It's quick and easy</h5></i>
+<b><h3>name         <input type="text"placeholder="    first name   " name = "name"></h3></b>
+<b><h3>password         <input type="text"placeholder="    password     "name = "password"></h3></b>
+<b><h3>confpassword         <input type="text"placeholder=" confirm password     "name = "confpassword"></h3></b>
+<b><h3>E-mail             <input type="text"placeholder="    enter email  "name = "email"></h3></b>
+<b><h3>Mobile no        <input type="text"placeholder="    enter number "></h3></b>
+<b><h3>Gender
+<select>
+<option>F</option>
+<option>M</option>
+<option>CUSTOM</option>
+</h3></b>
+</select>
+<b><h3>Address         <input type="text area"placeholder="    enter your address  "></h3></b>
+<b><h5><input type="submit" value="submit" ></h5></b>
+</form>
+
+</body>
+</html>

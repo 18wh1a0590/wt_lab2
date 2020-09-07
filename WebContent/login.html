@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>function validateform(){  
+     var name=document.myform.name.value;  
+     var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+} 
+else if(password==null || password==""){
+	alert("Password should not be empty");
+	return false;
+}
+else if(password.length<6){  
+	  alert("Password must be at least 6 characters long.");  
+	  return false;  
+	  } 
+}  
+  </script>
+<style>
+body{
+    background: url("https://c0.wallpaperflare.com/preview/701/644/924/white-printer-paper-beside-plant-and-paintbrush.jpg");
+    background-size:cover;
+    background-repeat:norepeat;
+    text-align:center;
+}
+</style>
+<title>Login Page</title>
+
+
+</head>
+<body>
+<form name="myform" method="post" action="bookscatalog.html" onsubmit="return validateform()" > 
+<h1> AMAZON </h1>
+<h5>The Online Book Store</h5>
+<br></br>
+<br></br> 
+
+<b><h3>name    <input type="text" name = "name"></h3></b>
+<b><h3>password    <input type="text" name = "password"></h3></b>
+<h5><a href=" ">   forgot password?</a></h5>
+<b><h5><input type="submit" value="submit" ></h5></b>
+
+</form>
+
+</body>
+</html>
